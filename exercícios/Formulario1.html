@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.html">
+<fieldset>
+<legend><strong>Formulário Matricula de Curso</strong></legend>
+<form>
+<label for=“pnome">Primeiro nome:</label><br>
+<input type="text" id="pnome" name="pnome"><br>
+<label for=“unome">Sobrenome:</label><br>
+<input type="text" id="unome" name="unome">
+
+
+<p><strong>Cursos</strong></p>
+
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">Tecnico em informática </label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">Graduação- Análise e Desenvolvimento de sistema</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">Profissionalidade- Programação Wed</label>
+
+
+<p><strong>Linguiagem de Programação de sua Preferencia:</strong></p>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> PHP</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> java</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> Python</label>
+
+<p><strong>Escolha um turno:</strong></p>
+
+
+<select name="cars" id="cars">
+<option value="volvo">Manhã</option>
+<option value=“fiat">Tarde</option>
+<option value="mercedes">noite</option>
+<option value="audi">Madrugada</option>
+</select>
+
+<p></p>
+
+<p><strong>Escolha uma unidade mais proxima de você</strong></p>
+<input list="browsers" name="browser" id="browser">
+<datalist id="browsers">
+<option value="Chapecó">
+<option value="Palhoça">
+<option value="Caçador">
+<option value="Lages">
+<option value="São Miguel">
+</datalist>
+
+<input type="submit" value ="Enviar">
+
+</fieldset>
+</form>
+    
+</body>
+</html>

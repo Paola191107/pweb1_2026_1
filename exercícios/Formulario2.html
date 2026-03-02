@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.html">
+<fieldset>
+<legend><strong>Sistema de Gestão Acadêmico</strong></legend>
+<form>
+    <p><strong>Manutenção de Usuário do Sistema Interno </strong></p>
+<label for=“pnome">Login:</label><br>
+<input type="text" id="pnome" name="pnome"><br>
+<label for=“unome">Senha:</label><br>
+<input type="text" id="unome" name="unome">
+
+<p><strong>Status:</strong></p>
+
+
+<select name="status" id="status">
+<option value="Ativo">Ativo</option>
+<option value="Inativo">Inavivo</option>
+<option value="Inexistente">Inexistente </option>
+</select>
+
+<p><strong>Tipos:</strong></p>
+
+<input type="radio" id="tecnico" name="fav_language" value="Tecnico">
+<label for="Tecnico">Tecnico</label>
+<input type="radio" id="Professor" name="fav_language" value="Professor">
+<label for="Professor">Professor</label>
+<input type="radio" id="Aluno" name="fav_language" value="Aluno">
+<label for="Aluno">Aluno</label>
+
+<p><strong>Data de Criação</strong></p>
+<input type="date" id="nascimento"><br>
+
+<p><strong>Perfil:</strong></p>
+
+<input type="radio" id="Convidado" name="fav_language" value="Convidado">
+<label for="Convidado">Convidado</label>
+<input type="radio" id="Administrador" name="fav_language" value="Administrador">
+<label for="Administrador">Administrador</label>
+
+<p>Observação:</p>
+<textarea id="Observação" name="Observação" rows="4" cols="50">
+Adicione aqui sua observação.
+</textarea>
+
+<p><strong>Modulos:</strong></p>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Compras">
+<label for="vehicle1"> Compras</label>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Biblioteca">
+<label for="vehicle2"> Biblioteca</label>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Acadêmico">
+<label for="vehicle3">Acadêmico</label>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Documentação">
+<label for="vehicle3">Documentação</label>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Recursos Humanos">
+<label for="vehicle3">Recursos Humanos</label><br>
+
+
+
+<input type="submit" value ="Enviar">
+<input type="button" value = "Salvar">
+
+</fieldset>
+</form>
+    
+</body>
+</html>

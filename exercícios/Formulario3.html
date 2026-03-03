@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matriculas</title>
 </head>
 <body>
     
+     <form action="/action_page.html">
+<fieldset>
+<legend><strong>Matriculas dos alunos</strong></legend>
+<form>
+    <p><strong>Dados Pessoais </strong></p>
+
+<label>Nome do Aluno:</label><br>
+<input type="text" maxlength="50" required size="40"><br><br>
+
+<label>Data de Nascimento:</label><br>
+<input type="date" required><br><br>
+
+<label>E-mail:</label><br>
+<input type="email" required size="40"><br><br>
+
+<label>Telefone:</label><br>
+<input type="tel" maxlength="13" required ><br><br>
+</fieldset>
+
+<br>
+<fieldset>
+     <legend><strong>Informações Escolares</strong></legend>
+
+<p>Serie:</p>
+<select name="serie" id="serie">
+<option value="1º Ano do Ensino Médio">1º Ano do Ensino Médio</option>
+<option value="2º Ano do Ensino Médio">2º Ano do Ensino Médio</option>
+<option value="3º Ano do Ensino Médio">3º Ano do Ensino Médio </option>
+<option value="4º Ano do Ensino Médio">4º Ano do Ensino Médio </option>
+</select>
+
+<p>Turno Preferencial:</p>
+
+<input type="radio" id="Manhã" name="fav_language" value="Manhã">
+<label for="Manhã">Manhã</label>
+<input type="radio" id="Tarde" name="fav_language" value="Tarde">
+<label for="Tarde">Tarde</label>
+<input type="radio" id="Noite" name="fav_language" value="Noite">
+<label for="Noite">Noite</label>
+
+</fieldset>
+<fieldset>
+<legend><strong>Atividades Extra-curriculares</strong></legend>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Teatro">
+<label for="vehicle1"> Teatro</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Música">
+<label for="vehicle2"> Música</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Ballet">
+<label for="vehicle3">Ballet</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Pintura">
+<label for="vehicle3">Pintura</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Judô">
+<label for="vehicle3">Judô</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Futebol">
+<label for="vehicle3">Futebol</label><br>
+
+</fieldset>
+
+<input type="submit" value ="Enviar Matricula">
+
 </body>
 </html>

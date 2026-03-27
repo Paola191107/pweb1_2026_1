@@ -1,37 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="js/menu.js"></script>
+
 
     <title>Site Eletrizante</title>
 </head>
-<body>
 
-    <nav class="navbar navbar-dark bg-primary fixed-top">
+
+<body>
+    <!--Menu navegação-->
+    <div id="menu-lateral" class="menu-lateral">
+        <ul class="menu-itens">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#personagem">Personagem</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#SuperPoderes">Poderes</a></li>
+        </ul>
+    </div>
+
+
+    <nav class="navbar navbar-dark bg-primary fixed-top ">
         <div class="container">
+            <button class="btn-menu" onclick="showMenu()">
+                <img id="img-Menu" src="img/icon-hamburger-menu.png" width="28" height="28" alt="menu" />
+            </button>
             <a href="#" class="navbar-brand mx-auto">
-                <img src="./img/icone_tela_principal.png" 
-                width="40"
-                height="40"
-                class="rounded-circle me-2"
-                alt="Super Choque"> Super Choque
+                <img src="./img/icone_tela_principal.png" width="40" height="40" class="rounded-circle me-2"
+                    alt="Super Choque" />
+                Super Choque
             </a>
         </div>
     </nav>
-
-    <header>
-        <div class="container">
-            <img src="./img/icone_tela_principal.png"
-                class="rounded-circle me-2">
-            <h1 class="display-4 fw-bold">Super Choque</h1>
-            <p class="lead">O Herói do Eletromagnetismo</p>
-            <a href="www.xvideos.com" target="blank" class="btn btn-warning btn-lg">Saiba Mais</a>
+    <!--Seção Principal-->
+    <header id="inicio" class="hero-section text-center textwhite py-5">
+        <div class="container mt-5">
+            <img class="hero-image rounded-circle mb-4" src="./img/icone_tela_principal.png" alt="super Shock" />
+            <h1 class="display-4 fw-bold text-white">Super Choque</h1>
+            <p class="lead text-white">O Herói do Eletromagnetismo</p>
+            <a href="#" class="btn btn-warning btn-lg">Saiba Mais</a>
         </div>
     </header>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <!--História do desenho-->
+    <main>
+        <section id="historia" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="img-fluid rounded" src="./img/historia.jpg" alt="História Super Shock">
+                    </div>
+                    <div class="col-6">
+                        <h2 class="text-primary">História do Desenho</h2>
+                        <p>O Super Choque - ou Static, como é originalmente conhecido - é um desenho animado
+                            produzido pela Milestone,Warner Bros e DC Comics que teve um grande sucesso
+                            na década de 2000 e 2010.
+                        </p>
+
+
+                        <p>Seu criador, Dwayne Glenn McDuffie, foi um escritor e editor da Marvel, porém,
+                            acabou se retirando da empresa por conta de não se sentir confortável com a
+                            forma que a produtora tratava seus super heróis negros.
+                        </p>
+
+
+                        <p class="text-muted">
+                            <small>Fonte: Observatório do Cinema Virgil Hawkins</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--História do personagem-->
+    <section id="personagem" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="text-primary">História de Personagem</h2>
+                    <p>Virgil Ovid Hawkins é um jovem negro, nascido e criado na cidade de Dakota City.
+                        Ele era um garoto inteligente que gostava de quadrinhos e RPG's.
+                    </p>
+
+
+                    <p>Após ser exposto a um gás radioativo em uma briga de gangues,
+                        ele desenvolveu poderes de eletromagnetismo e decidiu se tornar um super herói.
+                    </p>
+
+
+                    <p class="text-muted ">
+                        <small class="text-white">Fonte: Aficionados</small>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid rounded" src="./img/historia2.jpg" alt="História Super Shock">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Curiosidades-->
+    <section id="curiosidades" class=" py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid rounded" src="./img/curiosidades.jpeg" alt="História Super Shock">
+                </div>
+                <div class="col-6">
+                    <h2 class="text-primary">Curiosidades</h2>
+                    <p> O nome é uma homenagem ao advogado Virgil Darnell Hawkins
+                        Foi inspirado no Homem-Aranha da Marvel
+                        Já integrou a Liga da Justiça em episódio especial
+                        Usa habilidades de skate para se locomover com seus poderes
+                    </p>
+
+
+                    <p class="text-muted ">
+                        <small>Fonte: Legião dos Heróis</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Super Poderes-->
+    <section id="SuperPoderes" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="text-primary">Super poderes</h2>
+                    <p>Os poderes se baseiam na eletricidade e eletromagnetismo:</p>
+                    <p class="test-muted"></p>
+                    <small class="test-white">Fonte: NerdBox</small>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Eletromagnetismo</li>
+                                <li>Campos magnéticos</li>
+                                <li>Controle elétrico</li>
+                                <li>Levitação de metais</li>
+                                <li> Ondas de rádio</li>
+                            </ul>
+
+
+                            <ul>
+                                <li> Raios elétricos</li>
+                                <li> Bolas de energia</li>
+                                <li>Magnetização</li>
+                                <li>Energia pura</li>
+                                <li>Intelecto genial</li>
+                            </ul>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid rounded" src="./img/super_poder.jpeg" alt="História Super Shock">
+                </div>
+
+
+
+
+
+
+
+
+                </main>
+                <footer classm=" bg-primary text-white text-center px-3">
+                    <div class="container">
+                        <p class="mb-0">
+                            projeto Desenvolvimento Web 1- Site Super Choque &copy; 2026
+                        </p>
+                    </div>
+                </footer>
+
+
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+                    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+                    crossorigin="anonymous"></script>
 </body>
+
+
 </html>

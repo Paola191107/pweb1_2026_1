@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #c5ad5d;
+}
+
+header {
+  background: linear-gradient(90deg, #6d5f30, #6d5f30);
+}
+
+header .nav-link {
+  transition: 0.3s;
+}
+
+header .nav-link:hover {
+  color: #000000 !important;
+}
+
+header .fw-bold {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  height: 100% !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+main {
+  min-height: 70vh;
+}
+
+
+article section {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+article section:hover {
+  transform: scale(1.01);
+}
+
+
+aside div {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+aside div:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.card {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+form input,
+form textarea {
+  border-radius: 8px;
+}
+
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+iframe {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  background: #6d5f30;
+}
+
+footer a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #6d5f30;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+  transition: 0.3s;
+}
+
+/* Remove a linha do último item */
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* Efeito ao passar o mouse nos itens da lista */
+ul li:hover {
+  color: #ffc107; /* Muda para o dourado do Bootstrap */
+  background-color: rgba(136, 101, 4, 0.1); /* Fundo levemente mais escuro */
+}
+
+/* Ajuste para as listas dentro do ASIDE (conforme Figura 02) */
+aside ul {
+  color: #343a40;
+}
+
+aside ul li {
+  border-bottom: 1px solid #dee2e6;
+}

@@ -31,7 +31,7 @@ header .fw-bold {
 }
 
 main {
-  min-height: 70vh;
+  min-height: 70%;
 }
 
 
@@ -61,18 +61,18 @@ aside div:hover {
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
  .card-img-top {
     height: 250px;
     object-fit: cover;
   }
-
+/*fixo na tela*/
 aside .card {
   position: sticky;
   top: 20px;
 }
-
+/*botao*/
 .btn {
   border-radius: 8px;
   transition: 0.3s;

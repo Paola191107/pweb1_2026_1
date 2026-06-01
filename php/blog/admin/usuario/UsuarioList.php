@@ -32,7 +32,7 @@ if (!empty($_POST)) {
       </div>
       <div class="col-5">
         <label for="valor">Valor</label>
-        <input type="text" name="valor" placeholder="Pesquisar..." class="form-control" ?>
+        <input type="text" name="valor" placeholder="Pesquisar..." class="form-control">
       </div>
       <div class="col-5">
         <button type="submit" class="btn btn-primary">Buscar</button>

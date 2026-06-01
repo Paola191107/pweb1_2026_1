@@ -15,6 +15,10 @@
 </head>
 <?php
 
+if(session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
 function redirect($page, $time = 1500)
 {
   echo "<script>
@@ -43,9 +47,21 @@ function showValidationError($errors = [])
   }
 }
 
-function getFormValue($field)
+function getFormValue($field, $data = null)
 {
-  return isset($_POST[$field]) ? $_POST[$field] : '';
+  if (isset($_POST[$field])) {
+    return $_POST[$field];
+  }
+
+  if (is_array($data) && isset($data[$field])) {
+    return $data[$field];
+  }
+
+  if (is_object($data) && isset($data->$field)) {
+    return $data->$field;
+  }
+
+  return '';
 }
 ?>
 

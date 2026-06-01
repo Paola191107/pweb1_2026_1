@@ -42,7 +42,14 @@ class db {
 
         return $st->fetchAll(PDO::FETCH_CLASS);
     }
+   //SELECT * FROM 
+    public function findBy($campo, $valor)
+    {   $sql = "SELECT * FROM $this->table_name WHERE $campo = ?";
+        $st = $this->conn ->prepare($sql);
+        $st->execute();
 
+        return $st->fetchObject();
+    }
 
     //INSERT INTO tabela (`campo1`, `campo2`, `campo3`) VALUES (?, ?, ?);
     public function store($dados){
@@ -79,13 +86,51 @@ class db {
     }
 
       public function search($dados){
-        $campo = $dados['tipo'];
-        $valor = $dados['valor'];
-        $sql = "SELECT * FROM $this->table_name WHERE $campo LIKE?";
-        $st = $this->conn->prepare($sql);
-        $st->execute(["%$valor%"]);
 
-        return $st->fetchAll(PDO::FETCH_CLASS);
+        try{
+            $campo = $dados['tipo'];
+            $valor = $dados['valor'];
+            $sql = "SELECT * FROM $this->table_name WHERE $campo LIKE?";
+            $st = $this->conn->prepare($sql);
+            $st->execute(["%$valor%"]);
+
+            return $st->fetchAll(PDO::FETCH_CLASS);
+        }catch(PDOException $e){
+            throw new Exception("Erro ao deletar".$e->getMessage());
+        }
+    }
+
+     public function find($id){
+
+            $sql = "SELECT * FROM $this->table_name WHERE id = ?";
+            $st = $this->conn->prepare($sql);
+            $st->execute([$id]);
+
+            return $st->fetchObject();
+        
+    } 
+    public function update($dados){
+        $campos = "";
+        $vetorData = [];
+        $sep = "";
+
+        foreach($dados as $campo => $valor) {
+            if ($campo !== "id") {
+                $campos .= $sep . "$campo = ?";
+                $vetorData[] = $valor;
+                $sep = ",";
+            }
+        }
+
+        $vetorData[] = $dados['id']; // Adiciona o ID ao final do vetor de dados para o WHERE
+        $sql = "UPDATE $this->table_name SET $campos WHERE id = ?";
+
+        try{
+            $st = $this->conn->prepare($sql);
+            $st->execute($vetorData);
+        }catch(PDOException $e){
+            throw new Exception("Erro ao atualizar".$e->getMessage());
+        }
     }
 }
 

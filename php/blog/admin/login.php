@@ -40,7 +40,7 @@ if (!empty($_POST)) {
             $usuario = $db->findBy('email', $_POST['email']);
 
             if($usuario && password_verify($_POST['senha'], $usuario->senha)) {
-                // Login successful
+                
                 session_start();
                 $_SESSION['usuario_id'] = $usuario->id;
                 $_SESSION['usuario_nome'] = $usuario->nome;
